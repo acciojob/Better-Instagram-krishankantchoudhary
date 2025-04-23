@@ -14,11 +14,11 @@ document.querySelectorAll('.image').forEach(image => {
     e.preventDefault();
 
     if (draggedElement && draggedElement !== e.target) {
-      // Get the computed styles
+      // Get the computed styles for background images
       const draggedBg = window.getComputedStyle(draggedElement).backgroundImage;
       const targetBg = window.getComputedStyle(e.target).backgroundImage;
 
-      // Swap background images
+      // Swap the background images
       draggedElement.style.backgroundImage = targetBg;
       e.target.style.backgroundImage = draggedBg;
     }
